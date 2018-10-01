@@ -1,0 +1,31 @@
+name:                unit-inhabitance-isomorpmisms
+version:             0.1.0.0
+github:              "michaeljklein/unit-inhabitance-isomorpmisms"
+license:             BSD3
+author:              "Michael Klein"
+maintainer:          "lambdamichael@gmail.com"
+copyright:           "2018 Michael Klein"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description:         Please see the README on Github at <https://github.com/michaeljklein/unit-inhabitance-isomorpmisms#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- QuickCheck
+
+library:
+  source-dirs: src
+
+tests:
+  unit-inhabitance-isomorpmisms-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - unit-inhabitance-isomorpmisms

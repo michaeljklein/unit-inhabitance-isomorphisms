@@ -1,0 +1,51 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e89dce5c4a3bfd5303e75d69174a11e9b967f2b7c4fc43138de0bd85b4421b18
+
+name:           unit-inhabitance-isomorpmisms
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/michaeljklein/unit-inhabitance-isomorpmisms#readme>
+homepage:       https://github.com/michaeljklein/unit-inhabitance-isomorpmisms#readme
+bug-reports:    https://github.com/michaeljklein/unit-inhabitance-isomorpmisms/issues
+author:         Michael Klein
+maintainer:     lambdamichael@gmail.com
+copyright:      2018 Michael Klein
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/michaeljklein/unit-inhabitance-isomorpmisms
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_unit_inhabitance_isomorpmisms
+  hs-source-dirs:
+      src
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite unit-inhabitance-isomorpmisms-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_unit_inhabitance_isomorpmisms
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , unit-inhabitance-isomorpmisms
+  default-language: Haskell2010
